@@ -16,7 +16,7 @@ namespace EvenementApi.Controllers
     public class EvenementDaysController : ControllerBase
     {
         private readonly IMapper mapper;
-        private readonly EvenementApiContext _context;
+       // private readonly EvenementApiContext context;
         private EvenementRepo evenementRepo;
         public EvenementDaysController(EvenementApiContext context, IMapper mapper)
         {
@@ -31,8 +31,8 @@ namespace EvenementApi.Controllers
             //när jag pluggar ut evenementday, är jag också interesserad att få lectures med
             //därför skcikar med flaggar i kontollern (bool includLectures)
             ////autommaper er en transport sträkk
-            //var result = await evenementRepo.GetAllAsync(includLectures);
-            var dto = mapper.Map<EvenementDay>(await evenementRepo.GetAllAsync(includLectures));
+            var result = await evenementRepo.GetAllAsync(includLectures);
+            var dto = mapper.Map<EvenementDay>(result);
             return Ok(dto);          
         }
 

@@ -48,7 +48,7 @@ namespace EvenementApi
                 //  var adminPW = config["AdminPW"];
                 try
                 {
-                    SeeData.InitializeAsync(services).Wait();
+                   // SeeData.InitializeAsync(services).Wait();
 
                 }
                 catch (Exception ex)
