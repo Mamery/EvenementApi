@@ -7,6 +7,7 @@ using EvenementApi.Models.Entities;
 
 namespace EvenementApi.Data
 {
+    //anropa database
     public class EvenementApiContext : DbContext
     {
         public EvenementApiContext (DbContextOptions<EvenementApiContext> options)
@@ -14,6 +15,6 @@ namespace EvenementApi.Data
         {
         }
 
-        public DbSet<EvenementApi.Models.Entities.EvenementDay> EvenementDay { get; set; }
+        public DbSet<EvenementDay> EvenementDays { get; set; }
     }
 }

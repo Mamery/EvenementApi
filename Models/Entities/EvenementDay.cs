@@ -10,7 +10,7 @@ namespace EvenementApi.Models.Entities
         //kom i håg att lada ned nugetpacket, entityframework, sql
 
         public int Id { get; set; }
-        public int Name { get; set; }
+        public string Name { get; set; }
         public DateTime EvenementDate { get; set; }
         public int MyProperty { get; set; }
         public int Length { get; set; }

@@ -7,7 +7,7 @@ namespace EvenementApi.Models.Entities
 {
     public class Lecture
     {
-        //varje speaker ska ha en speaker
+        //varje lecture ska ha en speaker
         public int Id { get; set; }
         public string Title { get; set; }
         public int Level { get; set; }
